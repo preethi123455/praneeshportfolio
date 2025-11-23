@@ -10,14 +10,15 @@ const Achievements = () => {
 
   const achievements = [
     {
-      year: '2024',
-      title: 'Lead Developer Recognition',
-      description: 'Recognized as a leading developer for outstanding contributions to open source projects.',
+    year: '2025',
+title: 'SENIOR CITIZEN PORTAL',
+description: 'Won 2nd Prize in KEC (KONGU ENGINEERING COLLEGE) Hackathon for outstanding contributions to the project.',
     },
     {
-      year: '2023',
-      title: 'Full Stack Certification',
-      description: 'Completed comprehensive MERN stack certification from leading tech institute.',
+      year: '2025',
+title: 'BLOOD DONATION PLATFORM',
+description: 'Won 2nd Prize in Hackons, Trivandrum, Kerala at Mohandas College of Engineering and Technology.',
+
     },
     {
       year: '2023',

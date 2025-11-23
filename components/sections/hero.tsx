@@ -61,19 +61,7 @@ const Hero = () => {
             </button>
           </div>
 
-          {/* Scroll Indicator */}
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="mt-12"
-          >
-            <div className="flex flex-col items-center text-primary text-sm">
-              <span>Scroll down to explore</span>
-              <svg className="w-6 h-6 mt-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </div>
-          </motion.div>
+         
         </motion.div>
 
         {/* Right - Floating Image Section */}

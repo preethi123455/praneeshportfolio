@@ -91,17 +91,18 @@ const Projects = () => {
         </motion.h2>
 
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+  variants={containerVariants}
+  initial="hidden"
+  animate={isInView ? 'visible' : 'hidden'}
+  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr"
+>
+
           {projects.map((project, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-              className="group"
+             className="group h-full flex flex-col"
             >
               <div className="glass rounded-2xl overflow-hidden border border-white/20 hover:border-primary/50 transition-all hover:shadow-2xl hover:shadow-primary/20 glow-border">
                 {/* Project Image */}

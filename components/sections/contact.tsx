@@ -51,60 +51,6 @@ const Contact = () => {
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <motion.form
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            onSubmit={handleSubmit}
-            className="space-y-6"
-          >
-            <div>
-              <label className="block text-sm font-semibold mb-2">Name</label>
-              <input
-                type="text"
-                name="name"
-                value={formState.name}
-                onChange={handleChange}
-                placeholder="Your name"
-                className="w-full px-4 py-3 bg-white border-2 border-neutral-medium rounded-lg focus:border-primary focus:outline-none transition-colors"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">Email</label>
-              <input
-                type="email"
-                name="email"
-                value={formState.email}
-                onChange={handleChange}
-                placeholder="your@email.com"
-                className="w-full px-4 py-3 bg-white border-2 border-neutral-medium rounded-lg focus:border-primary focus:outline-none transition-colors"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-semibold mb-2">Message</label>
-              <textarea
-                name="message"
-                value={formState.message}
-                onChange={handleChange}
-                placeholder="Your message here..."
-                rows={5}
-                className="w-full px-4 py-3 bg-white border-2 border-neutral-medium rounded-lg focus:border-primary focus:outline-none transition-colors resize-none"
-              ></textarea>
-            </div>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              type="submit"
-              className="w-full py-3 bg-gradient-to-r from-primary to-accent-light text-white font-bold rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all"
-            >
-              Send Message
-            </motion.button>
-          </motion.form>
-
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -154,4 +100,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact  
