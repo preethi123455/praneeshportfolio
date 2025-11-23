@@ -7,7 +7,7 @@ const Hero = () => {
   const textRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    const text = "Software Engineer || Globally Certified MongoDB Associate Developer & Oracle Apex Cloud Developer"
+    const text = "Software Engineer"
     const element = textRef.current
     if (!element) return
 

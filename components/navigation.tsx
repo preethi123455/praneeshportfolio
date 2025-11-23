@@ -45,7 +45,7 @@ export default function Navigation({ activeSection }: NavigationProps) {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent-light bg-clip-text text-transparent">
-            Dev
+            Portfolio
           </div>
 
           <div className="hidden md:flex items-center gap-8">

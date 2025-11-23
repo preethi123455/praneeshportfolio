@@ -5,7 +5,7 @@ const geistSans = Geist({ subsets: ['latin'] })
 const geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Portfolio - MERN Stack Developer',
+  title: 'Portfolio | Praneesh',
   description: 'Explore my work, projects, and skills in web development',
   viewport: 'width=device-width, initial-scale=1.0',
     generator: 'v0.app'
