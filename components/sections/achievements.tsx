@@ -19,14 +19,12 @@ const Achievements = () => {
       title: 'BLOOD DONATION PLATFORM',
       description: 'Won 2nd Prize in Hackons, Trivandrum, Kerala at Mohandas College of Engineering and Technology.',
     },
+    // Add more achievements if needed
   ]
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
   }
 
   const itemVariants = {
@@ -50,18 +48,22 @@ const Achievements = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="flex flex-col gap-16"
         >
           {achievements.map((achievement, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 }}
-              className="glass p-6 rounded-2xl border border-white/20 hover:border-primary/50 transition-all hover:shadow-2xl hover:shadow-primary/20 flex flex-col h-full"
+              className={`flex flex-col lg:flex-row items-center ${
+                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+              } gap-8`}
             >
-              <div className="text-sm font-semibold text-primary mb-2">{achievement.year}</div>
-              <h3 className="text-xl font-bold mb-4 text-foreground">{achievement.title}</h3>
-              <p className="text-neutral-dark flex-1">{achievement.description}</p>
+              <div className="glass p-10 rounded-3xl border border-white/20 hover:border-primary/50 transition-all hover:shadow-2xl hover:shadow-primary/20 flex-1 min-h-[250px] flex flex-col justify-center">
+                <div className="text-sm font-semibold text-primary mb-3">{achievement.year}</div>
+                <h3 className="text-2xl font-bold mb-5 text-foreground">{achievement.title}</h3>
+                <p className="text-neutral-dark text-base">{achievement.description}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>
