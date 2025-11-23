@@ -86,39 +86,7 @@ const Technologies = () => {
             </motion.div>
           ))}
         </motion.div>
-
-        {/* Skills Meter Bars */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20 glass p-8 rounded-2xl"
-        >
-          <h3 className="text-2xl font-bold mb-8">Skill Levels</h3>
-          <div className="space-y-6">
-            {[
-              { skill: 'Frontend Development', level: 95 },
-              { skill: 'Backend Development', level: 88 },
-              { skill: 'Database Design', level: 85 },
-              { skill: 'DevOps & Deployment', level: 80 },
-            ].map((item, index) => (
-              <div key={index}>
-                <div className="flex justify-between mb-2">
-                  <span className="font-semibold text-foreground">{item.skill}</span>
-                  <span className="text-primary font-bold">{item.level}%</span>
-                </div>
-                <div className="w-full bg-neutral-light rounded-full h-3 overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={isInView ? { width: `${item.level}%` } : { width: 0 }}
-                    transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
-                    className="h-full bg-gradient-to-r from-primary to-accent-light rounded-full shadow-lg shadow-primary/50"
-                  ></motion.div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   )

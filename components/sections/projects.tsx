@@ -87,28 +87,31 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-4xl lg:text-5xl font-bold mb-16 text-center"
         >
-          Featured <span className="bg-gradient-to-r from-primary to-accent-light bg-clip-text text-transparent">Projects</span>
+          Featured{' '}
+          <span className="bg-gradient-to-r from-primary to-accent-light bg-clip-text text-transparent">
+            Projects
+          </span>
         </motion.h2>
 
         <motion.div
-  variants={containerVariants}
-  initial="hidden"
-  animate={isInView ? 'visible' : 'hidden'}
-  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr"
->
-
+          variants={containerVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr"
+        >
           {projects.map((project, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-             className="group h-full flex flex-col"
+              className="group h-full flex flex-col"
             >
-              <div className="glass rounded-2xl overflow-hidden border border-white/20 hover:border-primary/50 transition-all hover:shadow-2xl hover:shadow-primary/20 glow-border">
+              <div className="glass rounded-2xl overflow-hidden border border-white/20 hover:border-primary/50 transition-all hover:shadow-2xl hover:shadow-primary/20 glow-border flex flex-col h-full">
+                
                 {/* Project Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || '/placeholder.svg'}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
@@ -116,7 +119,7 @@ const Projects = () => {
                 </div>
 
                 {/* Project Info */}
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-bold mb-3 text-foreground">{project.title}</h3>
                   <p className="text-neutral-dark text-sm mb-4 leading-relaxed">{project.description}</p>
 
@@ -133,7 +136,7 @@ const Projects = () => {
                   </div>
 
                   {/* Links */}
-                  <div className="flex gap-3 pt-4 border-t border-white/20">
+                  <div className="flex gap-3 pt-4 mt-auto border-t border-white/20">
                     <a
                       href={project.github}
                       className="flex-1 px-4 py-2 bg-foreground text-white text-sm font-semibold rounded-lg hover:bg-primary transition-colors text-center"

@@ -12,7 +12,7 @@ const Achievements = () => {
     {
     year: '2025',
 title: 'SENIOR CITIZEN PORTAL',
-description: 'Won 2nd Prize in KEC (KONGU ENGINEERING COLLEGE) Hackathon for outstanding contributions to the project.',
+description: 'Won 2nd Prize in KEC Hackathon for outstanding contributions to the project.',
     },
     {
       year: '2025',

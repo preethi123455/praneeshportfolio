@@ -1,14 +1,17 @@
 'use client'
 
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useState, useRef } from 'react'
+import { motion, useInView } from 'framer-motion'
 
 const Contact = () => {
-  const ref = useRef(null)
+  const ref = useRef<HTMLElement | null>(null)
   const isInView = useInView(ref, { once: true, amount: 0.3 })
-  const [formState, setFormState] = useState({ name: '', email: '', message: '' })
+
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -25,8 +28,7 @@ const Contact = () => {
     { name: 'GitHub', icon: '🐙', url: 'https://github.com/Praneesh773' },
     { name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/praneesh-c-56641132b/' },
     { name: 'Leetcode', icon: '⚡', url: '#' },
-   { name: 'Email', icon: '✉️', url: 'mailto:praneesh582@gmail.com' }
-
+    { name: 'Email', icon: '✉️', url: 'mailto:praneesh582@gmail.com' },
   ]
 
   return (
@@ -38,7 +40,10 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-4xl lg:text-5xl font-bold mb-6 text-center"
         >
-          Get in <span className="bg-gradient-to-r from-primary to-accent-light bg-clip-text text-transparent">Touch</span>
+          Get in{' '}
+          <span className="bg-gradient-to-r from-primary to-accent-light bg-clip-text text-transparent">
+            Touch
+          </span>
         </motion.h2>
 
         <motion.p
@@ -47,7 +52,8 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center text-neutral-dark text-lg mb-12"
         >
-         I’m always open to opportunities where I can apply my skills and contribute to impactful projects. Let’s connect and create something meaningful together.
+          I’m always open to opportunities where I can apply my skills and contribute to impactful
+          projects. Let’s connect and create something meaningful together.
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -58,12 +64,10 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-6"
           >
-            {/* Info Cards */}
-            {[
+            {[ 
               { icon: '📧', title: 'Email', info: 'praneesh582@gmail.com' },
               { icon: '📱', title: 'Phone', info: '+91 97865 27455' },
               { icon: '📍', title: 'Location', info: 'Erode, Tamil Nadu, India' },
-
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -100,4 +104,4 @@ const Contact = () => {
   )
 }
 
-export default Contact  
+export default Contact
