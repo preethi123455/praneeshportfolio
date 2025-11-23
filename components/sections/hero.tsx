@@ -7,7 +7,7 @@ const Hero = () => {
   const textRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    const text = "MERN Stack Developer"
+    const text = "Software Engineer || Globally Certified MongoDB Associate Developer & Oracle Apex Cloud Developer"
     const element = textRef.current
     if (!element) return
 
@@ -34,18 +34,9 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="z-10"
         >
-          <div className="mb-6">
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="inline-block text-sm font-semibold text-primary mb-4"
-            >
-              👋 Welcome to my portfolio
-            </motion.div>
-          </div>
 
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-            Hi, I'm a
+            PRANEESH C
             <span
               ref={textRef}
               className="block bg-gradient-to-r from-primary via-accent-light to-primary bg-clip-text text-transparent min-h-20"
@@ -58,7 +49,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-lg text-neutral-dark mb-8 leading-relaxed max-w-lg">
-            Building beautiful, responsive web applications with modern technologies. Passionate about creating seamless user experiences.
+           AI & ML enthusiast and full-stack developer with strong analytical thinking and problem-solving skills, passionate about delivering unique and creative solutions.
           </p>
 
           <div className="flex gap-4">

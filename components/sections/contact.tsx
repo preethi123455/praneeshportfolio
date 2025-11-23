@@ -22,10 +22,11 @@ const Contact = () => {
   }
 
   const socials = [
-    { name: 'GitHub', icon: '🐙', url: '#' },
-    { name: 'LinkedIn', icon: '💼', url: '#' },
-    { name: 'Twitter', icon: '𝕏', url: '#' },
-    { name: 'Email', icon: '✉️', url: '#' },
+    { name: 'GitHub', icon: '🐙', url: 'https://github.com/Praneesh773' },
+    { name: 'LinkedIn', icon: '💼', url: 'https://www.linkedin.com/in/praneesh-c-56641132b/' },
+    { name: 'Leetcode', icon: '⚡', url: '#' },
+   { name: 'Email', icon: '✉️', url: 'mailto:praneesh582@gmail.com' }
+
   ]
 
   return (
@@ -46,7 +47,7 @@ const Contact = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-center text-neutral-dark text-lg mb-12"
         >
-          Have a project in mind? Let's collaborate and create something amazing together.
+         I’m always open to opportunities where I can apply my skills and contribute to impactful projects. Let’s connect and create something meaningful together.
         </motion.p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -113,10 +114,10 @@ const Contact = () => {
           >
             {/* Info Cards */}
             {[
-              { icon: '📧', title: 'Email', info: 'hello@example.com' },
-              { icon: '📱', title: 'Phone', info: '+1 (555) 123-4567' },
-              { icon: '📍', title: 'Location', info: 'San Francisco, CA' },
-              { icon: '⏰', title: 'Available', info: 'Mon - Fri, 9AM - 6PM' },
+              { icon: '📧', title: 'Email', info: 'praneesh582@gmail.com' },
+              { icon: '📱', title: 'Phone', info: '+91 97865 27455' },
+              { icon: '📍', title: 'Location', info: 'Erode, Tamil Nadu, India' },
+
             ].map((item, index) => (
               <motion.div
                 key={index}

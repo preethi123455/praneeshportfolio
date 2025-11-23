@@ -16,7 +16,15 @@ const Technologies = () => {
     { name: 'TypeScript', icon: '📘', color: 'from-blue-500 to-indigo-700' },
     { name: 'Tailwind CSS', icon: '🎨', color: 'from-cyan-400 to-cyan-600' },
     { name: 'Git', icon: '📦', color: 'from-orange-500 to-red-700' },
-    { name: 'Docker', icon: '🐳', color: 'from-blue-400 to-blue-700' },
+    { name: 'Python', icon: '🐍', color: 'from-blue-400 to-blue-700' },
+    { name: 'HTML & CSS', icon: '🌐', color: 'from-orange-400 to-red-500' },
+  { name: 'Bootstrap', icon: '🎨', color: 'from-purple-400 to-purple-600' },
+    { name: 'Figma (UI/UX)', icon: '🖌️', color: 'from-pink-400 to-pink-600' },
+  { name: 'C & C++', icon: '💻', color: 'from-blue-600 to-gray-700' },
+  { name: 'Java & JavaScript', icon: '☕', color: 'from-red-400 to-yellow-500' },
+ { name: 'Data Structures in C', icon: '📚', color: 'from-indigo-400 to-indigo-600' },
+ { name: 'Artificial Intelligence (Model Training)', icon: '🤖', color: 'from-purple-500 to-pink-600' },
+
   ]
 
   const containerVariants = {
